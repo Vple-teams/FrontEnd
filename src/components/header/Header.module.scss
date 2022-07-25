@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px red;
+}
+
+.headerImages {
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px blue;
+}
+
+.navContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border: solid 1px orange;
+
+  .navList {
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+    list-style: none;
+    li {
+      margin: 20px;
+    }
+  }
+}
+
+
+

@@ -1,9 +1,12 @@
-import './App.css';
+import React from 'react';
+import Home from './pages/Home';
+import './styles/index.scss'
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Vple</h1>
+      <Home />
     </div>
   );
 }
