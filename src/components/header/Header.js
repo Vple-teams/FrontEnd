@@ -6,25 +6,28 @@ import Alert from '../../icon/Alert.png';
 
 
 const Header = () => {
+
+    const navigationList = ['홈','플랜','펀딩','플로깅','커뮤니티'];
+
     return (
         <>
             <header className={style.container}>
-                <div className={style.headerImages}>
-                    <div>
-                        <img src={Logo}/>
-                    </div>
-                    <div>
-                        <img src={Profile} className={style.userIcon}/>
-                        <img src={Alert} className={style.userIcon}/>
+                <div className={style.headerIcons}>
+                    <h1 className={style.logoWrap}>
+                        <img src={Logo} className={style.logoIcon}/>
+                    </h1>
+                    <div className={style.iconsWrap}>
+                        <img src={Profile} className={style.profileIcon}/>
+                        <img src={Alert} className={style.alertIcon}/>
                     </div>
                 </div>
                 <nav className={style.navContainer}>
                     <ul className={style.navList}>
-                        <li>홈</li>
-                        <li>플랜</li>
-                        <li>펀딩</li>
-                        <li>플로깅</li>
-                        <li>커뮤니티</li>
+                        {navigationList.map( (list) => {
+                            return(
+                                <li className={style.navItem}>{list}</li>
+                            )
+                        })}
                     </ul>
                 </nav>
             </header>
