@@ -5,10 +5,10 @@ import Logo from '../../asset/logo.png'
 import Camera from '../../asset/camera.png';
 
 
-const AddBoard = () => {
+
+const AddBoard = (textState) => {
 
     const hasTagCategory = ['# 여행','# 식당','# 관광지','# 플로깅','# 펀딩'];
-
     return(
         <>
             <Header/>

@@ -36,12 +36,12 @@ export const TitleForm = styled.div`
     display: flex;
     .all-text{
       margin-top: 2px;
+      margin-left: 8px;
     }
     .view-all-btn{
-      width: 21px;
-      height: 18px;
-      margin-left: 10px;
-      margin-top: 1px;
+      width: 19px;
+      height: 16px;
+      margin-top: 3.5px;
     }
     
   }

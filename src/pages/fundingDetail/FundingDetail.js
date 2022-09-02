@@ -2,6 +2,7 @@ import DetailHeader from '../../components/detailHeader/DetailHeader'
 import {StyledImg, StyledContent, StyledDiv, StyledContentTitle, 
     StyledContentDescription, BigFont, AlignRight, GreenFont, 
     SmallFont, RateBar, AchievBar, WhiteButton, WhiteButtonPadding, GreenButton} from './FundingDetailStyle';
+import {useNavigate} from "react-router-dom";
 
 export default function FundingDetail() {
 
@@ -10,6 +11,8 @@ export default function FundingDetail() {
     let achievPercent = 6662;
     let money = 213520;
     let supporter = 24;
+
+    let navigate = useNavigate();
 
     return (
         <>

@@ -30,6 +30,7 @@ export const PloggingCardWrap = styled.div`
 
   
   .card-wrap {
+    cursor: pointer;
     flex: 0 0 auto;
     width: 160px;
     height: 160px;

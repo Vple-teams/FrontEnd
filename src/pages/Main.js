@@ -1,14 +1,19 @@
-import React from 'react';
-import Header from '../components/header/Header'
-import Home from '../components/home/Home'
-const Main = () => {
-    return(
-        <>
-            <Header />
-            <Home />
-            {/*버튼 누르면 홈에서 메인으로 바뀜  */}
-        </>
-    )
-}
-
-export default Main;
+// import React, {useState} from 'react';
+// import {headerTabIndex} from "../recoil/state";
+// import {useRecoilState} from "recoil";
+//
+// import Header from '../components/header/Header'
+//
+// import TabContent from "../components/TabContent";
+//
+//
+// const Main = () => {
+//     return (
+//         <>
+//             <Header/>
+//             <TabContent />
+//         </>
+//     )
+// }
+//
+// export default Main;

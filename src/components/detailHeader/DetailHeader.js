@@ -1,4 +1,5 @@
 import React from 'react'
+import {useNavigate} from "react-router-dom";
 import Profile from "../../asset/Profile.png";
 import Alert from "../../asset/Alert.png";
 import Logo from "../../asset/logo.png";
@@ -12,7 +13,12 @@ import {
     LogoWrap, TitleContainer
 } from "./DetailHeaderStyle";
 
+
 const DetailHeader = () => {
+    let navigate = useNavigate();
+    const onClickRouteBack = () => {
+        navigate(-1)
+    }
     return (
         <>
             <HeaderContainer>
@@ -26,7 +32,7 @@ const DetailHeader = () => {
                     </IconsWrap>
                 </HeaderIconsWrap>
                 <HeaderTitleContainer>
-                    <IconContainer>
+                    <IconContainer onClick={onClickRouteBack}>
                         <img src={BackArrow} className='back-arrow'/>
                     </IconContainer>
                     <TitleContainer>

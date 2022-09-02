@@ -1,4 +1,6 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
+import Header from "../header/Header";
 import {
     SearchContainer,
     ButtonWrap,
@@ -16,14 +18,30 @@ import {
 import Flag from '../../asset/flag.png';
 import image from '../../asset/page1.jpg';
 import image2 from '../../asset/page2.jpg';
+
 const Home = () => {
 
     const bestGuide = ['2박 3일 경주 여행', '1박 2일 부산 여행', '1박 2일 부산 여행', '1박 2일 부산 여행'];
     const bestRestaurant = ['연화바루', '비건버거', '비건포차'];
     const bestLocation = ['첨성대', '동궁 월지', '경주대릉'];
 
+    let navigate = useNavigate();
+    const onClickRouter = () => {
+        navigate('/mate')
+    }
+    const routerGuide = () => {
+        navigate('/view/guide')
+    }
+    const routerFood = () => {
+        navigate('/view/restaurant')
+    }
+    const routerLocation = () => {
+        navigate('/view/tour')
+    }
+
     return (
         <>
+            <Header />
             <SearchContainer>
                 <p className='userWrap'>
                     <span>홍길동</span> 님,
@@ -33,7 +51,7 @@ const Home = () => {
 
             <ButtonWrap>
                 <ItemsBtn>나의 플랜</ItemsBtn>
-                <ItemsBtn>메이트</ItemsBtn>
+                <ItemsBtn onClick={onClickRouter}>메이트</ItemsBtn>
             </ButtonWrap>
 
             <CardSection>
@@ -45,7 +63,7 @@ const Home = () => {
                 <CardContainer>
                     {bestGuide.map((value, index) => {
                         return (
-                            <CardWrap>
+                            <CardWrap onClick={routerGuide} >
                                 <img src={image} className='tourImage'/>
                                 <div className='cardInfoWrap'>
                                     <p className='cardTitle'>{value}</p>
@@ -68,7 +86,7 @@ const Home = () => {
                         {
                             bestRestaurant.map((value, index) => {
                                 return (
-                                    <RecommendImageWrap>
+                                    <RecommendImageWrap onClick={routerFood}>
                                         <img src={image2} className='itemImage'/>
                                         <img src={Flag} className='flagIcon'/>
                                         <span className='itemsName'>{value}</span>
@@ -91,7 +109,7 @@ const Home = () => {
                         {
                             bestLocation.map((value, index) => {
                                 return (
-                                    <RecommendImageWrap>
+                                    <RecommendImageWrap onClick={routerLocation}>
                                         <img src={image2} className='itemImage'/>
                                         <img src={Flag} className='flagIcon'/>
                                         <span className='itemsName'>{value}</span>
