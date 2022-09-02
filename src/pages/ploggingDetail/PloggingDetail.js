@@ -5,6 +5,7 @@ import PlogImage from '../../asset/plog_image.jpg';
 import NavBarDetail from "../../components/navDetail/NavBarDetail";
 import JoinList from "../../components/joinList/JoinList";
 import Comment from "../../components/comment/Comment";
+import {useNavigate} from "react-router-dom";
 
 const PloggingDetail = () => {
 

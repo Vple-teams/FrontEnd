@@ -1,4 +1,5 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
 import Header from '../header/Header';
 import {
     Container,
@@ -10,15 +11,16 @@ import {
 
 import TextBlock from "../textBlock/TextBlock";
 import ViewAll from '../../asset/view_all.png';
-import {useNavigate} from "react-router-dom";
-
-
 
 const Community = () => {
 
-    const navigate = useNavigate()
     const hashTag = ['# 여행','# 식당','# 관광지','# 플로깅','# 펀딩'];
     const boardItems = ['홍길동', '짱구', '철수', '흰둥이'];
+
+    let navigate = useNavigate();
+    const onClickRouteWriting = () => {
+        navigate('/board/add');
+    }
 
     return(
         <>
@@ -30,11 +32,11 @@ const Community = () => {
                     </InputWrap>
                     <TitleForm>
                         <div className='title-header'>
-                            <h4 className='all-text'>전체글</h4>
                             <img className='view-all-btn' src={ViewAll}/>
+                            <h4 className='all-text'>전체글</h4>
                         </div>
 
-                        <div className='create-text'>작성하기</div>
+                        <div className='create-text' onClick={onClickRouteWriting}>작성하기</div>
                     </TitleForm>
                     <TextForm>
                         {hashTag.map( (obj) => {

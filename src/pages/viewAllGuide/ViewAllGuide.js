@@ -4,7 +4,7 @@ import CardButton from '../../components/cardButton/CardButton';
 
 import {UlStyle} from '../../styles/UlStyle';
 
-export default function ViewAllGuide() {
+function ViewAllGuide() {
 
     const cards = [
         { guideTitle: '경주 여행 추천', content: '김나현 • 2022.01.30' },
@@ -35,3 +35,5 @@ export default function ViewAllGuide() {
         </>
     );
 }
+
+export default ViewAllGuide

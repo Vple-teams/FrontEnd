@@ -3,7 +3,10 @@ import DetailHeader from "../../components/detailHeader/DetailHeader";
 import {AddMainPostWrap, ApplyBtn, CameraIconWrap, Container, TextContainer, TextWrap} from "./AddPostStyle";
 import CameraIcon from '../../asset/camera.png';
 
+
+
 const AddPost = () => {
+
     return(
         <>
             <DetailHeader/>

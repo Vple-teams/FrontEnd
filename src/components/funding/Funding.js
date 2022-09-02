@@ -14,11 +14,19 @@ import image2 from '../../asset/page1.jpg';
 import reload from '../../asset/union.png';
 import image3 from '../../asset/image3.jpg';
 import image4 from '../../asset/image4.jpg';
+import {useNavigate} from "react-router-dom";
 
 const Funding = () => {
     const fundingTitle = ['펀딩 제목1', '펀딩 제목2', '펀딩 제목3', '펀딩 제목4'];
     const storeTitle = ['펀딩 제목5', '펀딩 제목6', '펀딩 제목7', '펀딩 제목8'];
     const liveRank = ['펀딩 제목9','펀딩 제목10','펀딩 제목11','펀딩 제목12','펀딩 제목13','펀딩 제목14']
+
+    let navigate = useNavigate();
+
+    const onClickRouter = () => {
+        navigate('/funding/detail');
+    }
+
     return (
         <>
             <Header/>
@@ -32,7 +40,7 @@ const Funding = () => {
 
                 {fundingTitle.map((value, index) => {
                     return (
-                        <FundingImg>
+                        <FundingImg onClick={onClickRouter}>
                             <img src={image2} className='card-img'/>
                             <span>펀딩제목</span>
                         </FundingImg>

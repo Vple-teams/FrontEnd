@@ -1,4 +1,5 @@
 import React from 'react'
+import {useNavigate} from "react-router-dom";
 import {
     BoardContainer,
     BoardHeaderWrap, BoardList,
@@ -14,9 +15,19 @@ import ArrowUp from '../../asset/arrow_up.png';
 import PloggingJoin from "../ploggingJoin/PloggingJoin";
 import PloggingCheck from "../ploggingCheck/PloggingCheck";
 
+
 const Plogging = () => {
 
-    const ploggingItems = ['플로깅 모집 제목', '플로깅 모집 제목', '플로깅 모집 제목', '플로깅 모집 제목'];
+    const ploggingItems = ['플로깅 모집 제목', '플로깅 모집 제목2', '플로깅 모집 제목3', '플로깅 모집 제목4'];
+
+    let navigate = useNavigate();
+    const onClickRoute = () => {
+        navigate('/plogging/detail');
+    }
+    const onClickRouteBoard = () => {
+        navigate('/plogging/writing');
+    }
+
 
     return (
         <>
@@ -28,9 +39,9 @@ const Plogging = () => {
                 <PloggingCardWrap>
                     {ploggingItems.map((obj, index) => {
                         return (
-                            <div className='card-wrap'>
+                            <div className='card-wrap' onClick={onClickRoute}>
                                 <img src={Image5} className='card-image'/>
-                                <span>플로깅 모집 제목</span>
+                                <span>{obj}</span>
                                 <p>asdfasdf</p>
                             </div>
                         )
@@ -41,7 +52,7 @@ const Plogging = () => {
                 <BoardHeaderWrap>
                     <div className='board-title-wrap'>
                         <h3 >게시판</h3>
-                        <div className='board-btn'>작성하기</div>
+                        <div className='board-btn' onClick={onClickRouteBoard}>작성하기</div>
                     </div>
                     <div  className='switch-btn-wrap'>
                         <span className='get-board'>모집 게시판</span>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "../../components/header/Header";
+
 import {
     Container, CurrentlyState,
     ListWrap,
@@ -12,18 +13,19 @@ import {
 import Image from '../../asset/logo.png'
 
 
+
+
 const FindMate = () => {
 
     const mateList = ['메이트1', '메이트2', '메이트3'];
     const mateMessages =['메이트4','메이트4','메이트4','메이트4','메이트4','메이트4',];
-
     return (
         <>
             <Header/>
             <MainContainer>
                 <Container>
                     <MateTitle>
-                        <h3 className='title'>메이트 찾기</h3>
+                        <h3 className='title' >메이트 찾기</h3>
                         <span className='guide-text'>반경 5km 이내에 있는 메이트</span>
                     </MateTitle>
                     {mateList.map((obj, index) => {
