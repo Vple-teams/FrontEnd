@@ -5,9 +5,5 @@ export const headerListState = atom({
     default: ['홈', '플랜', '펀딩', '플로깅', '커뮤니티'],
 });
 
-export const headerTabIndex = atom({
-    key: 'headerIndexState',
-    default: 0,
-});
 
 

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {useNavigate} from "react-router-dom";
+
 import {
     BoardContainer,
     BoardHeaderWrap, BoardList,
@@ -12,13 +13,21 @@ import Header from '../header/Header';
 import Image5 from '../../asset/image5.jpg';
 import SearchIcon from '../../asset/search.png';
 import ArrowUp from '../../asset/arrow_up.png';
-import PloggingJoin from "../ploggingJoin/PloggingJoin";
-import PloggingCheck from "../ploggingCheck/PloggingCheck";
+import TabContent from "../TabContent";
+// import PloggingJoin from "../ploggingJoin/PloggingJoin";
+// import PloggingCheck from "../ploggingCheck/PloggingCheck";
 
 
 const Plogging = () => {
 
     const ploggingItems = ['플로깅 모집 제목', '플로깅 모집 제목2', '플로깅 모집 제목3', '플로깅 모집 제목4'];
+    const navTabItems = ['모집 게시판', '인증 게시판'];
+
+    const [tab, setTab] = useState(0);
+
+    const onTap = (index) => {
+        setTab(index);
+    }
 
     let navigate = useNavigate();
     const onClickRoute = () => {
@@ -55,8 +64,11 @@ const Plogging = () => {
                         <div className='board-btn' onClick={onClickRouteBoard}>작성하기</div>
                     </div>
                     <div  className='switch-btn-wrap'>
-                        <span className='get-board'>모집 게시판</span>
-                        <span className='check-board'>인증 게시판</span>
+                        {navTabItems.map( (item,index) => {
+                            return(
+                                <span className='get-board' onClick={() => onTap(index)}>{item}</span>
+                            )
+                        })}
                     </div>
                     <div className='input-wrap'>
                         <input className='search-plogging' placeholder='찾으시는 내용이 있으신가요?'/>
@@ -64,8 +76,7 @@ const Plogging = () => {
                     </div>
                 </BoardHeaderWrap>
                 <div className='list-hr'/>
-                {/*<PloggingJoin/>*/}
-                <PloggingCheck/>
+                <TabContent tab={tab}/>
                 <div className='list-hr'/>
                 <footer className='footer-btn'>
                     <img src={ArrowUp} className='arrow-up'/>

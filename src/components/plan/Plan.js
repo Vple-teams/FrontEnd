@@ -14,12 +14,16 @@ import './CalendarCustom.css';
 import {useNavigate} from "react-router-dom";
 const Plan = () => {
     const [date, setDate] = useState(new Date);
-    let [count, setCount] = useState(0);
+    let [count, setCount] = useState(1);
     const onClickPlus = () => {
         setCount(prevCount => prevCount+1);
     }
     const onClickMinus = () => {
-        setCount(prevCount => prevCount-1);
+        if( count <= 1){
+            return null
+        } else {
+            setCount(prevCount => prevCount-1);
+        }
     }
 
     let navigate = useNavigate();
