@@ -136,6 +136,7 @@ export const BoardHeaderWrap = styled.div`
     margin-bottom: 20px;
     
     .get-board {
+      cursor: pointer;
       margin-left: 10px;
       color: #758B6F; // true값일때 색깔 변함 
     }

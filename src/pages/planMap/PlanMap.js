@@ -18,7 +18,7 @@ const PlanMap = () => {
             if (!map) return
             const ps = new kakao.maps.services.Places()
 
-            ps.keywordSearch('홍대 맛집', (data, status, _pagination) => {
+            ps.keywordSearch('구로디지털단지역 할리스', (data, status, _pagination) => {
                 if (status === kakao.maps.services.Status.OK) {
                     const bounds = new kakao.maps.LatLngBounds()
                     let markers = []

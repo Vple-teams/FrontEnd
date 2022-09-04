@@ -10,10 +10,10 @@ import Alert from '../../asset/Alert.png';
 
 
 
-const Header = (props) => {
+const Header = () => {
 
     const headerTabList = useRecoilValue(headerListState); // 해더에 보여줄 배열 string 값
-    const [tabIndex, setTabIndex] = useRecoilState(headerTabIndex);
+    // const [tabIndex, setTabIndex] = useRecoilState(headerTabIndex);
 
     let navigate = useNavigate();
     const onClickBackHome = () => {
