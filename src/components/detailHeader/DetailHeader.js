@@ -14,7 +14,7 @@ import {
 } from "./DetailHeaderStyle";
 
 
-const DetailHeader = () => {
+const DetailHeader = (props) => {
     let navigate = useNavigate();
     const onClickRouteBack = () => {
         navigate(-1)
@@ -36,7 +36,7 @@ const DetailHeader = () => {
                         <img src={BackArrow} className='back-arrow'/>
                     </IconContainer>
                     <TitleContainer>
-                        <h3>플로깅 모집 제목</h3>
+                        <h3>{props.title}</h3>
                     </TitleContainer>
                 </HeaderTitleContainer>
             </HeaderContainer>

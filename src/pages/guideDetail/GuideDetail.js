@@ -18,8 +18,8 @@ export default function GuideDetail() {
 
     const location = useLocation();
 
-    // const detailTitle = location.state.guideTitle;
-    // const detailContent = location.state.content;
+    const detailTitle = location.state.guideTitle;
+    const detailContent = location.state.content;
 
     const [isClip, setClip] = useState(false);
 
@@ -30,13 +30,13 @@ export default function GuideDetail() {
                 <img src={tempGuide} className='guide-image' />
             </ImageWrap>
             <ContentDiv>
-                <div className="titleWrap">{"detailTitle"}</div>
+                <div className="titleWrap">{detailTitle}</div>
                 <ClipDiv>
                     <ButtonStyle onClick={() => setClip(!isClip)}>
                         {isClip ? <ClipButtonG /> : <ClipButtonW />}
                     </ButtonStyle>
                 </ClipDiv>
-                <div className="writerWrap">{"detailContent"}</div>
+                <div className="writerWrap">{detailContent}</div>
                 <EditButton>플랜 수정</EditButton>
 
                 
