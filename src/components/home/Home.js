@@ -31,15 +31,19 @@ const Home = () => {
     let navigate = useNavigate();
     const onClickRouter = () => {
         navigate('/mate')
+        window.scrollTo(0,0)
     }
     const routerGuide = () => {
         navigate('/view/guide')
+        window.scrollTo(0,0)
     }
     const routerFood = () => {
         navigate('/view/restaurant')
+        window.scrollTo(0,0)
     }
     const routerLocation = () => {
         navigate('/view/tour')
+        window.scrollTo(0,0)
     }
 
     return (

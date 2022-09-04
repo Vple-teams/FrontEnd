@@ -10,10 +10,28 @@ import {useNavigate} from "react-router-dom";
 const PloggingDetail = () => {
 
     const navBarMenu = ['상세 내용', '참여자', '댓글'];
+    //메뉴 리스트
+    const navBarContent = [
+        {
+            title: "상세 내용",
+            content:
+            <NavBarDetail />
+        },
+        {
+            title: "참여자",
+            content:
+            <JoinList/>
+        },
+        {
+            title: "댓글",
+            content:
+            <Comment/>
+        },
+    ]
 
     return (
         <>
-            <DetailHeader/>
+            <DetailHeader title="플로깅 모집 제목"/>
             <ImageContainer>
                 <img src={PlogImage} className='plog-image'/>
             </ImageContainer>
@@ -24,9 +42,6 @@ const PloggingDetail = () => {
                     )
                 })}
             </NavBarContainer>
-            {/*<NavBarDetail />*/}
-            {/*<JoinList/>*/}
-            <Comment/>
         </>
     )
 }

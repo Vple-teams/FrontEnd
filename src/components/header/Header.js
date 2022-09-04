@@ -18,6 +18,11 @@ const Header = (props) => {
     let navigate = useNavigate();
     const onClickBackHome = () => {
         navigate('/')
+        window.scrollTo(0,0)
+    };
+    const onClickProfile = () => {
+        navigate('/myProfile')
+        window.scrollTo(0,0)
     };
     const onClickRouting = (index) => {
         if(index === 0 ){
@@ -43,7 +48,7 @@ const Header = (props) => {
                         <img src={Logo} className='logoIcon'/>
                     </h1>
                     <div className='iconsWrap'>
-                        <img src={Profile} className='profileIcon' />
+                        <img src={Profile} className='profileIcon' onClick={onClickProfile}/>
                         <img src={Alert} className='alertIcon'/>
                     </div>
                 </HeaderIcons>

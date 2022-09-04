@@ -97,9 +97,6 @@ export default function MyProfile() {
         });
     }
 
-
-
-
     return (
         <>
             <DetailHeader title="" />

@@ -38,8 +38,6 @@ export default function GuideDetail() {
                 </ClipDiv>
                 <div className="writerWrap">{detailContent}</div>
                 <EditButton>플랜 수정</EditButton>
-
-                
             </ContentDiv>
 
         </>

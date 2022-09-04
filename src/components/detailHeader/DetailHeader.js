@@ -16,18 +16,27 @@ import {
 
 const DetailHeader = (props) => {
     let navigate = useNavigate();
+    const onClickBackHome = () => {
+        navigate('/')
+        window.scrollTo(0,0)
+    };
     const onClickRouteBack = () => {
         navigate(-1)
     }
+    const onClickProfile = () => {
+        navigate('/login')
+        window.scrollTo(0,0)
+    };
+
     return (
         <>
             <HeaderContainer>
                 <HeaderIconsWrap>
                     <LogoWrap>
-                        <img src={Logo} className='logo-image'/>
+                        <img src={Logo} className='logo-image' onClick={onClickBackHome}/>
                     </LogoWrap>
                     <IconsWrap className='iconsWrap'>
-                        <img src={Profile} className='profileIcon'/>
+                        <img src={Profile} className='profileIcon' onClick={onClickProfile}/>
                         <img src={Alert} className='alertIcon'/>
                     </IconsWrap>
                 </HeaderIconsWrap>
