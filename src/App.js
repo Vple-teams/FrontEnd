@@ -24,6 +24,12 @@ import Home from "./components/home/Home";
 import Funding from "./components/funding/Funding";
 import Plogging from "./components/plogging/Plogging";
 import Community from "./components/community/Community";
+import GuideDetail from './pages/guideDetail/GuideDetail';
+import RestaurantDetail from './pages/restaurantDetail/RestaurantDetail';
+import TourSpotDetail from './pages/tourSpotDetail/TourSpotDetail';
+import MateProfile from './pages/mateProfile/MateProfile';
+import MyProfile from './pages/myProfile/MyProfile';
+import MyProfileEdit from './pages/myProfileEdit/MyProfileEdit';
 
 function App() {
     return (
@@ -46,6 +52,12 @@ function App() {
                     <Route path='/view/guide' element={<ViewAllGuide/>}/>
                     <Route path='/view/restaurant' element={<ViewAllRestaurant/>}/>
                     <Route path='/view/tour' element={<ViewAllTourSpot/>}/>
+                    <Route path='/guide/detail' element={<GuideDetail/>} />
+                    <Route path='/restaurant/detail' element={<RestaurantDetail/>} />
+                    <Route path='/tourSpot/detail' element={<TourSpotDetail/>} />
+                    <Route path='/mateProfile' element={<MateProfile/>} />
+                    <Route path='/myProfile' element={<MyProfile/>} />
+                    <Route path='/myProfile/edit' element={<MyProfileEdit/> }/>
                 </Routes>
             </Router>
         </div>

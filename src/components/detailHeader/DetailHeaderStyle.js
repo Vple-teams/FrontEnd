@@ -16,7 +16,7 @@ export const HeaderIconsWrap = styled.div`
 
 export const LogoWrap = styled.div`
   width: 62px;
-  height: 32px;
+  height: 36px;
   margin-top: 19px;
   margin-left: 19px;
   .logo-image{

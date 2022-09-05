@@ -15,9 +15,7 @@ export const StyledTopMargin = styled.div `
     padding-top: 7rem;
     text-align: center;
     background-color: white;
-`;
 
-export const StyledLogo = styled.div`
     .logoIcon {
         width: 102px;
         height: 61px;
