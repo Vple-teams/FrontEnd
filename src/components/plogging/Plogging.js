@@ -14,8 +14,8 @@ import Image5 from '../../asset/image5.jpg';
 import SearchIcon from '../../asset/search.png';
 import ArrowUp from '../../asset/arrow_up.png';
 import TabContent from "../TabContent";
-// import PloggingJoin from "../ploggingJoin/PloggingJoin";
-// import PloggingCheck from "../ploggingCheck/PloggingCheck";
+//import PloggingJoin from "../ploggingJoin/PloggingJoin";
+//import PloggingCheck from "../ploggingCheck/PloggingCheck";
 
 
 const Plogging = () => {
@@ -64,7 +64,7 @@ const Plogging = () => {
                         <div className='board-btn' onClick={onClickRouteBoard}>작성하기</div>
                     </div>
                     <div  className='switch-btn-wrap'>
-                        {navTabItems.map( (item,index) => {
+                    {navTabItems.map( (item,index) => {
                             return(
                                 <span className='get-board' onClick={() => onTap(index)}>{item}</span>
                             )

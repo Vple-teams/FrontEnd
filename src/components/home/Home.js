@@ -18,8 +18,7 @@ import {
 import Flag from '../../asset/flag.png';
 import image from '../../asset/page1.jpg';
 import image2 from '../../asset/page2.jpg';
-import {getApi} from "../../api/getApi";
-import axios from "axios";
+import { ButtonStyle } from '../../styles/ButtonStyle';
 
 
 const Home = () => {
@@ -31,18 +30,20 @@ const Home = () => {
     let navigate = useNavigate();
     const onClickRouter = () => {
         navigate('/mate')
+        window.scrollTo(0,0)
     }
     const routerGuide = () => {
         navigate('/view/guide')
+        window.scrollTo(0,0)
     }
     const routerFood = () => {
         navigate('/view/restaurant')
+        window.scrollTo(0,0)
     }
     const routerLocation = () => {
         navigate('/view/tour')
+        window.scrollTo(0,0)
     }
-
-    const red = axios.get('https://vple-backend.all.gagark.shop/v2/api-docs');
 
     return (
         <>
@@ -63,6 +64,9 @@ const Home = () => {
                 <TitleWrap>
                     <div className='titleDeco'/>
                     <h3 className='recommendGuide'>추천 가이드</h3>
+                    <ButtonStyle onClick={routerGuide}>
+                        <img src={arrow} className='arrow'/>
+                    </ButtonStyle>
                 </TitleWrap>
 
                 <CardContainer>
@@ -84,6 +88,9 @@ const Home = () => {
                 <RecommendTitleWrap>
                     <div className='titleDeco'/>
                     <h3 className='recommendTitle'>추천 식당</h3>
+                    <ButtonStyle onClick={routerFood}>
+                        <img src={arrow} className='arrow'/>
+                    </ButtonStyle>
                 </RecommendTitleWrap>
 
                 <ContainerItemsWrap>
@@ -107,6 +114,9 @@ const Home = () => {
                 <RecommendTitleWrap>
                     <div className='titleDeco'/>
                     <h3 className='recommendTitle'>추천 관광지</h3>
+                    <ButtonStyle onClick={routerLocation}>
+                        <img src={arrow} className='arrow'/>
+                    </ButtonStyle>
                 </RecommendTitleWrap>
 
                 <ContainerItemsWrap>

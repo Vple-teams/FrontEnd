@@ -75,6 +75,12 @@ export const TitleWrap = styled.div`
   .recommendGuide {
     font-weight: initial;
   }
+
+  .arrow{
+    margin-left: 5px;
+    width: 10px;
+    height: 15px;
+  }
 `;
 
 export const CardContainer = styled.div`
@@ -151,6 +157,12 @@ export const RecommendTitleWrap = styled.div`
     height: 21px;
     background-color: gainsboro;
     margin-right: 12px;
+  }
+
+  .arrow{
+    margin-left: 5px;
+    width: 10px;
+    height: 15px;
   }
 `;
 
