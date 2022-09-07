@@ -13,12 +13,22 @@ import Alert from '../../asset/Alert.png';
 const Header = () => {
 
     const headerTabList = useRecoilValue(headerListState); // 해더에 보여줄 배열 string 값
-    // const [tabIndex, setTabIndex] = useRecoilState(headerTabIndex);
+    //const [tabIndex, setTabIndex] = useRecoilState(headerTabIndex);
 
     let navigate = useNavigate();
     const onClickBackHome = () => {
         navigate('/')
+        window.scrollTo(0,0)
     };
+    const onClickProfile = () => {
+        navigate('/myProfile')
+        window.scrollTo(0,0)
+    };
+    const routerAlarm = () => {
+        navigate('/alarm')
+        window.scrollTo(0,0)
+    }
+
     const onClickRouting = (index) => {
         if(index === 0 ){
             navigate('/')
@@ -43,8 +53,8 @@ const Header = () => {
                         <img src={Logo} className='logoIcon'/>
                     </h1>
                     <div className='iconsWrap'>
-                        <img src={Profile} className='profileIcon' />
-                        <img src={Alert} className='alertIcon'/>
+                        <img src={Profile} className='profileIcon' onClick={onClickProfile}/>
+                        <img src={Alert} className='alertIcon' onClick={routerAlarm}/>
                     </div>
                 </HeaderIcons>
                 <NavContainer >
@@ -54,7 +64,6 @@ const Header = () => {
                         )
                     })}
                 </NavContainer>
-                <SelectBar/>
             </Container>
         </>
     )

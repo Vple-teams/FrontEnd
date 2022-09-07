@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const SelectBar = styled.div`
+  width: 70px;
+  height: 7px;
+  margin-left: 317px;
+  background-color: #859980;
+
+  position: absolute;
+  top: 100px;
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -27,7 +37,6 @@ export const PloggingCardWrap = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-
   
   .card-wrap {
     cursor: pointer;
@@ -82,7 +91,6 @@ export const BoardHeaderWrap = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-
   .input-wrap {
     display: flex;
     justify-content: center;
@@ -171,7 +179,6 @@ export const BoardList = styled.div`
   justify-content: space-between;
   width: 100%;
   
-
   
   .board-list-info{
     margin-left: 24px;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../header/Header';
 import {
+    SelectBar,
     AdContainer,
     FundingSection,
     FundingImg,
@@ -30,6 +31,8 @@ const Funding = () => {
     return (
         <>
             <Header/>
+            <SelectBar/>
+            
             <AdContainer>
                 <img src={image1} className='ad-image'/>
             </AdContainer>

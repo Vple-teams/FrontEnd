@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
+export const SelectBar = styled.div`
+  width: 70px;
+  height: 7px;
+  margin-left: 115px;
+  background-color: #859980;
+
+  position: absolute;
+  top: 100px;
+`;
 
 export const PlanContainer = styled.div`
   background-color: #ffffff;
   padding-left: 26px;
   padding-right: 26px;
-  height: 100vh;
+  padding-bottom: 30px;
   
   .basic-setting{
     color: #000000;
@@ -43,7 +52,7 @@ export const SelectLocationOption = styled.div`
   .select-box{
     color: #A5A5A5;
     font-size: 13px;
-    padding-left: 78px;
+    padding-left: 15px;
     margin-top: 6px;
     width: 44%;
     height: 36px;
@@ -51,8 +60,8 @@ export const SelectLocationOption = styled.div`
     outline: none;
     border: solid 0.5px #858585;
     appearance:none;
+
     .option{
-      padding-left: 10px;
       color: #858585;
     }
   };
@@ -74,6 +83,9 @@ export const CountWrap = styled.div`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   display: flex;
   align-items: center;
+
+  margin-bottom: 20px;
+
   justify-content: space-around;
   .people{
   };
@@ -86,6 +98,7 @@ export const CountContainer = styled.div`
   align-items: center;
   width: 30%;
   margin-left: 200px;
+
   .set-btn{
     font-size: 25px;
     line-height: 27px;
@@ -95,6 +108,7 @@ export const CountContainer = styled.div`
     border-radius: 50px;
     border: solid 0.5px black;
   };
+
   .count{};
   //.plus-btn{
   //  width: 24px;
@@ -105,12 +119,13 @@ export const CountContainer = styled.div`
 `;
 
 export const SubmitButton = styled.div`
-  margin-top: 20px;
-  margin-bottom: 20px;
   width: 100%;
   height: 61px;
   border-radius: 10px;
-  background-color: #D9D9D9;
+  //background-color: #D9D9D9;
+  background-color: #758B6F;
+  color: white;
+  
   display: flex;
   justify-content: center;
   align-items: center;

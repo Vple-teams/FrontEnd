@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import DetailHeader from '../../components/detailHeader/DetailHeader'
 import ProfilePlan from '../../components/profilePlan/ProfilePlan';
+import ProfileFollowing from '../../components/profileFollowing/ProfileFollowing';
 import ProfileFollow from '../../components/profileFollow/ProfileFollow';
 import { useNavigate } from 'react-router-dom';
 
@@ -23,6 +24,13 @@ import tempProfile from '../../asset/temp/tempProfile.jpeg';
 
 export default function MyProfile() {
 
+
+    //프로필 편집 페이지 이동
+    const navigate = useNavigate();
+    const moveEditPage = () => {
+        navigate('/myProfile/edit');
+        window.scrollTo(0,0)
+    }
 
     const planCards = [
         '뚜벅이 경주 맛집',
@@ -63,7 +71,7 @@ export default function MyProfile() {
                 <div className='follow'>
                     {followings.map((mate) => {
                         return (
-                            <ProfileFollow mate={mate} editMode={false}/>
+                            <ProfileFollowing mate={mate} editMode={false}/>
                         )
                     }
                     )}
@@ -86,18 +94,6 @@ export default function MyProfile() {
     const changeMenu = (menuIndex) => {
         setMenu(menuIndex)
     }
-
-    //프로필 편집
-    const navigate = useNavigate();
-    const moveEditPage = () => {
-        navigate('/myProfile/edit', {
-            state: {
-                
-            }
-        });
-    }
-
-
 
 
     return (

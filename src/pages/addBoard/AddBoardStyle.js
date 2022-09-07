@@ -23,6 +23,7 @@ export const WritingForm = styled.div`
     outline: none;
     border: none;
     writing-mode: horizontal-tb;
+    resize: none;
   }
   
 `;
@@ -90,17 +91,6 @@ export const HashTagContainer = styled.div`
   .hash-tag-box {
     display: flex;
     justify-content: space-around;
-    
-    .hash-tag{
-      color: #5E5E5E;
-      font-size: 12px;
-      text-align: center;
-      line-height: 32px;
-      width: 63px;
-      height: 30px;
-      border-radius: 20px;
-      border: solid 1px #758B6F;
-    }
   }
 
   .submit-btn-box {
@@ -109,15 +99,15 @@ export const HashTagContainer = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     
     .submit-btn{
       text-align: center;
-      line-height: 56px;
+      line-height: 55px;
       background-color: #758B6F;
       color: #ffffff;
       width: 100%;
-      height: 30%;
+      height: 43%;
       border-radius: 10px;
       
     }
