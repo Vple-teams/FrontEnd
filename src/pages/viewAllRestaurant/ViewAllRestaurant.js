@@ -1,7 +1,8 @@
 import DetailHeader from '../../components/detailHeader/DetailHeader'
 import DetailSearchBar from '../../components/searchBar/DetailSearchBar'
-import CardButton2 from '../../components/cardButton2/CardButton2';
+import RestaurantCard from '../../components/restaurantCard/RestaurantCard';
 import {UlStyle} from '../../styles/UlStyle';
+import { useNavigate } from 'react-router-dom';
 
 export default function ViewAllRestaurant() {
 
@@ -27,10 +28,10 @@ export default function ViewAllRestaurant() {
             <DetailSearchBar/>
             <UlStyle>
                 {cards.map(card => (
-                    <CardButton2
+                    <RestaurantCard
                         name={card.name}
                     />
-
+                    
                 ))}
             </UlStyle>
         </>

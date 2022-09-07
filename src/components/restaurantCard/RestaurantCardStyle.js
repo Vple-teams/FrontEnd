@@ -25,7 +25,9 @@ export const ClipButtonW = styled(ButtonStyle)`
     width: 12px;
     height: 13px;
     margin-top: 11px;
-    margin-left: 95px;
+    margin-left: 43px;
+
+    position: absolute;
 `;
 export const ClipButtonG = styled(ButtonStyle)`
     background-image: url(${IconClipG});
@@ -33,7 +35,9 @@ export const ClipButtonG = styled(ButtonStyle)`
     width: 12px;
     height: 13px;
     margin-top: 11px;
-    margin-left: 95px;
+    margin-left: 43px;
+
+    position: absolute;
 `;
 
 export const StyledContentDiv = styled.div`

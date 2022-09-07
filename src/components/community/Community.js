@@ -2,6 +2,7 @@ import React from 'react';
 import {useNavigate} from "react-router-dom";
 import Header from '../header/Header';
 import {
+    SelectBar,
     Container,
     InputWrap,
     SearchContainer,
@@ -25,6 +26,7 @@ const Community = () => {
     return(
         <>
             <Header/>
+            <SelectBar/>
             <Container>
                 <SearchContainer>
                     <InputWrap>

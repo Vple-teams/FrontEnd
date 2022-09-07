@@ -2,6 +2,7 @@ import React from 'react';
 import Header from "../../components/header/Header";
 
 import {
+    SelectBar,
     Container, CurrentlyState,
     ListWrap,
     MainContainer,
@@ -22,6 +23,7 @@ const FindMate = () => {
     return (
         <>
             <Header/>
+            <SelectBar/>
             <MainContainer>
                 <Container>
                     <MateTitle>

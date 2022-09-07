@@ -30,6 +30,10 @@ import TourSpotDetail from './pages/tourSpotDetail/TourSpotDetail';
 import MateProfile from './pages/mateProfile/MateProfile';
 import MyProfile from './pages/myProfile/MyProfile';
 import MyProfileEdit from './pages/myProfileEdit/MyProfileEdit';
+import ReviewRestaurant from './pages/reviewRestaurant/ReviewRestaurant';
+import ReviewTourSpot from './pages/reviewTourSpot/ReviewTourSpot';
+import SavedPlan from './pages/savedPlan/SavedPlan';
+import AlarmWindow from './pages/alarmWindow/AlarmWindow';
 
 function App() {
     return (
@@ -54,10 +58,14 @@ function App() {
                     <Route path='/view/tour' element={<ViewAllTourSpot/>}/>
                     <Route path='/guide/detail' element={<GuideDetail/>} />
                     <Route path='/restaurant/detail' element={<RestaurantDetail/>} />
-                    <Route path='/tourSpot/detail' element={<TourSpotDetail/>} />
+                    <Route path='/tour/detail' element={<TourSpotDetail/>} />
                     <Route path='/mateProfile' element={<MateProfile/>} />
                     <Route path='/myProfile' element={<MyProfile/>} />
                     <Route path='/myProfile/edit' element={<MyProfileEdit/> }/>
+                    <Route path='/review/restaurant' element={<ReviewRestaurant/> }/>
+                    <Route path='/review/tour' element={<ReviewTourSpot/> }/>
+                    <Route path='/view/plan' element={<SavedPlan/> }/>
+                    <Route path='/alarm' element={<AlarmWindow/>} />
                 </Routes>
             </Router>
         </div>
