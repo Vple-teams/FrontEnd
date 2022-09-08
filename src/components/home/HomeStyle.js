@@ -86,10 +86,12 @@ export const TitleWrap = styled.div`
   }
 
   .recommendGuide {
+    cursor: pointer;
     font-weight: initial;
   }
 
   .arrow{
+    cursor: pointer;
     margin-left: 5px;
     width: 10px;
     height: 15px;

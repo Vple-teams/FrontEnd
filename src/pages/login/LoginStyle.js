@@ -12,14 +12,20 @@ import IconHide from '../../asset/IconHide.png';
 import { ButtonStyle } from '../../styles/ButtonStyle';
 
 export const StyledTopMargin = styled.div `
-    padding-top: 7rem;
-    text-align: center;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 7rem;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  align-items: center;
 
-    .logoIcon {
-        width: 102px;
-        height: 61px;
-      }
+  .logoIcon {
+    width: 102px;
+    height: 61px;
+  }
 `;
 
 export const StyledDiv = styled.div`
@@ -39,6 +45,7 @@ export const StyledInputEmail = styled.input`
     border: none;
     padding: 10px 10px;
     color: #758B6F;
+  
 `;
 export const StyledInputPassword = styled.input`
     width: 170px;
