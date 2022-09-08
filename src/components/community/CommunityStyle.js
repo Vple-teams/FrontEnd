@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const SelectBar = styled.div`
+  width: 70px;
+  height: 7px;
+  margin-left: 415px;
+  background-color: #859980;
+
+  position: absolute;
+  top: 100px;
+`;
+
 export const Container = styled.div`
   padding-left: 26px;
   padding-right: 26px;

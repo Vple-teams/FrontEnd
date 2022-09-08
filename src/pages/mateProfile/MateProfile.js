@@ -10,6 +10,7 @@ import {
     WrapProfilePhoto,
     WrapButton,
     FollowButton,
+    FollowingButton,
     TalkingButton,
     StateContainer,
     ContainButton,
@@ -22,7 +23,6 @@ import tempProfile from '../../asset/temp/tempProfile.jpeg';
 
 
 export default function MateProfile() {
-
 
     const planCards = [
         '뚜벅이 경주 맛집',
@@ -87,8 +87,11 @@ export default function MateProfile() {
         setMenu(menuIndex)
     }
 
-    //useEffect(() => console.log(menu));
-
+    //팔로잉 여부
+    const [isFollowing, setIsFollowing] = useState(false);
+    const changeFollowingState = () => {
+        setIsFollowing(!isFollowing);
+    }
 
 
     return (
@@ -105,7 +108,9 @@ export default function MateProfile() {
                 </TagContainer>
             </ProfileContainer>
             <WrapButton>
-                <FollowButton>팔로우</FollowButton>
+                {isFollowing === true ? 
+                <FollowingButton onClick={changeFollowingState}>팔로잉</FollowingButton> 
+                : <FollowButton onClick={changeFollowingState}>팔로우</FollowButton>}
                 <TalkingButton>대화하기</TalkingButton>
             </WrapButton>
             <StateContainer>

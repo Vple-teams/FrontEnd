@@ -1,6 +1,6 @@
 import DetailHeader from '../../components/detailHeader/DetailHeader'
 import DetailSearchBar from '../../components/searchBar/DetailSearchBar'
-import CardButton from '../../components/cardButton/CardButton';
+import GuideCard from '../../components/guideCard/GuideCard';
 
 import {UlStyle} from '../../styles/UlStyle';
 
@@ -24,7 +24,7 @@ function ViewAllGuide() {
             <DetailSearchBar/>
             <UlStyle>
                 {cards.map(card => (
-                    <CardButton
+                    <GuideCard
                         guideTitle={card.guideTitle}
                         content={card.content}
                     />

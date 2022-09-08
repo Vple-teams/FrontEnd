@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
     WrapLine,
     MateButton,
@@ -7,7 +8,9 @@ import {
 } from './ProfileFollowStyle';
 import tempProfile from '../../asset/temp/tempProfile.jpeg';
 
-export default function ProfileFollow({mate, editMode, btnMsg}) {
+export default function ProfileFollow({mate, editMode, unFollow}) {
+
+    const onDelete = () => unFollow(mate.id);
 
     if(editMode) {
         return (
@@ -21,13 +24,14 @@ export default function ProfileFollow({mate, editMode, btnMsg}) {
                         <p>{mate.greeting}</p>
                     </div>
                 </MateButton>
-                <EditButton>{btnMsg}</EditButton>
+                 <EditButton onClick={onDelete}>취소</EditButton>
+
             </WrapLine>
         );
     }
     else {
         return (
-            <WrapLine>
+            <WrapLine >
                 <MateButton>
                     <ImgDiv>
                         <img src={tempProfile} className='mate-photo' />

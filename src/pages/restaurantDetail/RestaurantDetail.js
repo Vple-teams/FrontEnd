@@ -1,6 +1,7 @@
 import DetailHeader from '../../components/detailHeader/DetailHeader'
 import tempGuide from '../../asset/temp/tempGuide.png';
 import React, { useRef, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Review from '../../components/review/Review';
 
@@ -33,7 +34,14 @@ import MenuCardButton from '../../components/menuCardButton/MenuCardButton';
 import IconMore from '../../asset/IconMore.png';
 import IconUp from '../../asset/IconUp.png';
 
-export default function GuideDetail() {
+export default function RestaurantDetail() {
+
+    //화면 이동
+    let navigate = useNavigate();
+    const routerReview = () => {
+        navigate('/review/restaurant')
+        window.scrollTo(0,0)
+    }
 
     //const location = useLocation();
 
@@ -55,15 +63,15 @@ export default function GuideDetail() {
     ];
 
     //스크롤
-    const reviewRef = useRef(null);
+    const topRef = useRef(null);
     const scrollToUp = () => {
-        reviewRef.current.scrollIntoView({ behavior: 'smooth' });
+        topRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
 
     return (
-        <>
-            <DetailHeader title="식당" />
+        <div  ref={topRef}>
+            <DetailHeader title="식당"/>
             <ImageWrap>
                 <img src={tempGuide} className='guide-image' />
             </ImageWrap>
@@ -114,7 +122,7 @@ export default function GuideDetail() {
                 <MoreButton><img src={IconMore} className="iconMore" />더보기</MoreButton>
             </MenuDiv>
 
-            <ReviewDiv ref={reviewRef}>
+            <ReviewDiv >
                 <div className='container'>
                     <ReviewTitle>
                         <div className='titleDeco' />
@@ -123,7 +131,7 @@ export default function GuideDetail() {
                     </ReviewTitle>
                     <div className='align-right'>
                         
-                    <WriteReviewBtn>작성하기</WriteReviewBtn>
+                    <WriteReviewBtn onClick={routerReview}>작성하기</WriteReviewBtn>
                     </div>
                 </div>
 
@@ -156,6 +164,6 @@ export default function GuideDetail() {
             </ReviewDiv>
 
 
-        </>
+        </div>
     );
 }

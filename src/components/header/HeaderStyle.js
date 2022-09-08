@@ -49,6 +49,7 @@ export const NavContainer = styled.nav`
   width: 100%;
   height: 30px;
   cursor: pointer;
+  margin-bottom: 7px;
 
   .navItem {
     text-align: center;
@@ -60,10 +61,3 @@ export const NavContainer = styled.nav`
   }
 `;
 
-export const SelectBar = styled.div`
-  width: 70px;
-  height: 7px;
-  margin-left: 15px;
-  background-color: #859980;
-  transform: translate();
-`;

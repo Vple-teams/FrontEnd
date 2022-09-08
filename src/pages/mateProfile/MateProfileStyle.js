@@ -72,6 +72,17 @@ export const FollowButton = styled(ButtonStyle)`
 
     margin-right: 15px;
 `;
+export const FollowingButton = styled(ButtonStyle)`
+    width: 156.64px;
+    height: 38.77px;
+    background-color: #EDEDED;
+    border-radius: 6.05px;
+
+    color: black;
+    font-size: 16px;
+
+    margin-right: 15px;
+`;
 export const TalkingButton = styled(ButtonStyle)`
     width: 156.64px;
     height: 38.77px;

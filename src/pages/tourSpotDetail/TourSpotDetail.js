@@ -2,6 +2,7 @@ import DetailHeader from '../../components/detailHeader/DetailHeader'
 import tempGuide from '../../asset/temp/tempGuide.png';
 import React, { useState, useRef } from "react";
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Review from '../../components/review/Review';
 import {
     ImageWrap,
@@ -26,6 +27,13 @@ import IconUp from '../../asset/IconUp.png';
 
 export default function GuideDetail() {
 
+    //화면 이동
+    let navigate = useNavigate();
+    const routerReview = () => {
+        navigate('/review/tour')
+        window.scrollTo(0,0)
+    }
+
     //const location = useLocation();
 
     const [isClip, setClip] = useState(false);
@@ -46,13 +54,13 @@ export default function GuideDetail() {
     ];
 
     //스크롤
-    const reviewRef = useRef(null);
+    const topRef = useRef(null);
     const scrollToUp = () => {
-        reviewRef.current.scrollIntoView({ behavior: 'smooth' });
+        topRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
-        <>
+        <div ref={topRef}>
             <DetailHeader title="관광지" />
             <ImageWrap>
                 <img src={tempGuide} className='guide-image' />
@@ -84,7 +92,7 @@ export default function GuideDetail() {
             </InfoDiv>
 
 
-            <ReviewDiv ref={reviewRef}>
+            <ReviewDiv >
             <div className='container'>
                     <ReviewTitle>
                         <div className='titleDeco' />
@@ -93,7 +101,7 @@ export default function GuideDetail() {
                     </ReviewTitle>
                     <div className='align-right'>
                         
-                    <WriteReviewBtn>작성하기</WriteReviewBtn>
+                    <WriteReviewBtn onClick={routerReview}>작성하기</WriteReviewBtn>
                     </div>
                 </div>
 
@@ -124,6 +132,6 @@ export default function GuideDetail() {
                     <img src={IconUp} className='icon' /> 맨 위로
                 </UpButton>
             </ReviewDiv>
-        </>
+        </div>
     );
 }

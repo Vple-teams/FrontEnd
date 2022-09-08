@@ -2,6 +2,7 @@ import React from 'react';
 import {useNavigate} from "react-router-dom";
 import Header from "../header/Header";
 import {
+    SelectBar,
     SearchContainer,
     ButtonWrap,
     ItemsBtn,
@@ -19,8 +20,9 @@ import arrow from '../../asset/arrow.png'
 import Flag from '../../asset/flag.png';
 import image from '../../asset/page1.jpg';
 import image2 from '../../asset/page2.jpg';
-import { ButtonStyle } from '../../styles/ButtonStyle';
+import arrow from '../../asset/arrow.png';
 
+import { ButtonStyle } from '../../styles/ButtonStyle';
 
 const Home = () => {
 
@@ -49,9 +51,11 @@ const Home = () => {
     return (
         <>
             <Header />
+            <SelectBar />
             <SearchContainer>
                 <p className='userWrap'>
                     <span >홍길동</span> 님,
+                    <span>홍길동</span> 님,
                 </p>
                 <p className='textWrap'>비플 함께 친환경 여행을 떠나보세요!</p>
             </SearchContainer>
