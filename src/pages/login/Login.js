@@ -45,14 +45,23 @@ export default function Login() {
             <StyledFilledButton>로그인</StyledFilledButton>
 
             <br />
-            <LoginOptionButton>아이디 찾기</LoginOptionButton>
-            <StyledBar>|</StyledBar>
-            <LoginOptionButton>비밀번호 찾기</LoginOptionButton>
-            <StyledBar>|</StyledBar>
-            <StyledButtonG>회원가입</StyledButtonG>
+
+            <div>
+                <LoginOptionButton>아이디 찾기</LoginOptionButton>
+                <StyledBar>|</StyledBar>
+                <LoginOptionButton>비밀번호 찾기</LoginOptionButton>
+                <StyledBar>|</StyledBar>
+                <StyledButtonG>회원가입</StyledButtonG>
+            </div>
+
 
             <br />
-            <StyledKaKaoButton /><StyledNaverButton /><StyledGoogleButton />
+            <div>
+                <StyledKaKaoButton />
+                <StyledNaverButton />
+                <StyledGoogleButton />
+            </div>
+
 
         </StyledTopMargin>
     );
