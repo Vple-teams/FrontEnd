@@ -1,14 +1,18 @@
 import React from 'react';
+import { useState } from 'react';
 import Header from '../../components/header/Header'
 import {BoardInput, Container, GetImageBtn, HashTagContainer, ProfileWrap, WritingForm} from "./AddBoardStyle";
 import Logo from '../../asset/logo.png'
 import Camera from '../../asset/camera.png';
+import ReviewTag from '../../components/reviewTag/ReviewTag';
 
 
 
 const AddBoard = (textState) => {
 
     const hasTagCategory = ['# 여행','# 식당','# 관광지','# 플로깅','# 펀딩'];
+
+
     return(
         <>
             <Header/>
@@ -35,7 +39,9 @@ const AddBoard = (textState) => {
                         <div className='hash-tag-box'>
                             {hasTagCategory.map( (obj,index) => {
                                 return(
-                                    <div className='hash-tag'>{obj}</div>
+                                    <ReviewTag
+                                        obj = {obj}
+                                    />
                                 )
                             })}
                         </div>

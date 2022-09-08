@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, {useRef, useState} from 'react'
 import {useNavigate} from "react-router-dom";
 
 import {
+    SelectBar,
     BoardContainer,
     BoardHeaderWrap, BoardList,
     BoardListWrap,
@@ -37,11 +38,20 @@ const Plogging = () => {
         navigate('/plogging/writing');
     }
 
+    //스크롤
+    const topRef = useRef(null);
+    const scrollToUp = () => {
+        topRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
 
     return (
-        <>
+        <div ref={topRef}>
+            
             <Header/>
-            <Container>
+            <SelectBar/>
+            
+            <Container >
                 <PloggingTitleWrap>
                     <h2>플로깅 공고</h2>
                 </PloggingTitleWrap>
@@ -78,12 +88,12 @@ const Plogging = () => {
                 <div className='list-hr'/>
                 <TabContent tab={tab}/>
                 <div className='list-hr'/>
-                <footer className='footer-btn'>
+                <footer className='footer-btn' onClick={scrollToUp} >
                     <img src={ArrowUp} className='arrow-up'/>
                     맨위로
                 </footer>
             </BoardContainer>
-        </>
+        </div>
     )
 }
 

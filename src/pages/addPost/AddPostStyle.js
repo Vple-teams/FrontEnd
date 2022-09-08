@@ -51,6 +51,7 @@ export const TextWrap = styled.div`
     height: 100%;
     outline: none;
     border: none;
+    resize: none;
   };
 `;
 

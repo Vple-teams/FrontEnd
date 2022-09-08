@@ -4,7 +4,7 @@ import { ButtonStyle } from '../../styles/ButtonStyle';
 import {
     CardButtonStyle, WrapImg, StyledImgDiv, ClipButtonG, ClipButtonW,
     StyledContentDiv, StyledTitleFont, StyledContentFont
-} from './CardButtonStyle'
+} from './GuideCardStyle'
 
 import { useNavigate } from 'react-router-dom';
 

@@ -27,6 +27,10 @@ const DetailHeader = (props) => {
         navigate('/login')
         window.scrollTo(0,0)
     };
+    const routerAlarm = () => {
+        navigate('/alarm')
+        window.scrollTo(0,0)
+    }
 
     return (
         <>
@@ -37,7 +41,7 @@ const DetailHeader = (props) => {
                     </LogoWrap>
                     <IconsWrap className='iconsWrap'>
                         <img src={Profile} className='profileIcon' onClick={onClickProfile}/>
-                        <img src={Alert} className='alertIcon'/>
+                        <img src={Alert} className='alertIcon' onClick={routerAlarm}/>
                     </IconsWrap>
                 </HeaderIconsWrap>
                 <HeaderTitleContainer>

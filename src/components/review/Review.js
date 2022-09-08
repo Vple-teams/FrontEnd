@@ -2,8 +2,6 @@ import {
     ReviewButton,
     ImgDiv,
 
-
-
 } from './ReviewStyle';
 
 import tempProfile from '../../asset/temp/tempProfile.jpeg';

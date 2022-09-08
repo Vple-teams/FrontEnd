@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+export const SelectBar = styled.div`
+  width: 70px;
+  height: 7px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: #859980;
+
+  position: absolute;
+  top: 100px;
+    
+
+`;
+
 export const SearchContainer = styled.section`
   display: flex;
   justify-content: center;

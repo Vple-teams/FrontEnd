@@ -1,22 +1,35 @@
 import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import { ButtonStyle } from '../../styles/ButtonStyle';
 import {CardButtonStyle, StyledImgDiv, ClipButtonG, ClipButtonW,
-    StyledContentDiv, StyledTitleFont} from '../cardButton2/CardButton2Style';
+    StyledContentDiv, StyledTitleFont} from './RestaurantCardStyle';
 
 export default function CardButton2({name}) {
+
+    //화면 이동
+    let navigate = useNavigate();
+    const routerDetail = () => {
+        navigate('/restaurant/detail')
+        window.scrollTo(0,0)
+    }
 
     const [isClip, setClip] = useState(false);
 
     return (
         <CardButtonStyle>
-            <StyledImgDiv>
-                <ButtonStyle onClick={() => setClip(!isClip)}>
+
+            <ButtonStyle onClick={() => setClip(!isClip)}>
                     { isClip ? <ClipButtonG/> : <ClipButtonW/> }
-                </ButtonStyle>
-            </StyledImgDiv>
+            
+            <div onClick={routerDetail}>
+            
+            <StyledImgDiv/>
             <StyledContentDiv>
                 <StyledTitleFont>{name}</StyledTitleFont>
             </StyledContentDiv>
+            </div>
+
+            </ButtonStyle>
         </CardButtonStyle>
 
     );

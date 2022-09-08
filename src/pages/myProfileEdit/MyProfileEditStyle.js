@@ -3,6 +3,12 @@ import Sheet from 'react-modal-sheet';
 
 import { ButtonStyle } from '../../styles/ButtonStyle';
 
+export const WrapContent = styled.div`
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+`;
+
 export const ProfileContainer = styled.div`
     text-align: center;
     background-color: white;

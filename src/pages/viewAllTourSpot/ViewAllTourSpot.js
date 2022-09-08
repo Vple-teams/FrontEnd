@@ -1,6 +1,6 @@
 import DetailHeader from '../../components/detailHeader/DetailHeader'
 import DetailSearchBar from '../../components/searchBar/DetailSearchBar'
-import CardButton2 from '../../components/cardButton2/CardButton2';
+import TourCard from '../../components/tourCard/TourCard';
 import {UlStyle} from '../../styles/UlStyle';
 
 
@@ -28,7 +28,8 @@ export default function ViewAllTourSpot() {
             <DetailSearchBar/>
             <UlStyle>
                 {cards.map(card => (
-                    <CardButton2
+                    <TourCard
+                        category={'tour'}
                         name={card.name}
                     />
 
