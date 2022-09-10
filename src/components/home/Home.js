@@ -20,7 +20,7 @@ import arrow from '../../asset/arrow.png'
 import Flag from '../../asset/flag.png';
 import image from '../../asset/page1.jpg';
 import image2 from '../../asset/page2.jpg';
-import arrow from '../../asset/arrow.png';
+// import arrow from '../../asset/arrow.png';
 
 import { ButtonStyle } from '../../styles/ButtonStyle';
 
