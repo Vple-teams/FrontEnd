@@ -24,6 +24,10 @@ const Header = () => {
         navigate('/myProfile')
         window.scrollTo(0,0)
     };
+    const onClickLogin = () => {
+        navigate('/login')
+        window.scrollTo(0,0)
+    }
     const routerAlarm = () => {
         navigate('/alarm')
         window.scrollTo(0,0)
@@ -53,7 +57,7 @@ const Header = () => {
                         <img src={Logo} className='logoIcon'/>
                     </h1>
                     <div className='iconsWrap'>
-                        <img src={Profile} className='profileIcon' onClick={onClickProfile}/>
+                        <img src={Profile} className='profileIcon' onClick={onClickLogin}/>
                         <img src={Alert} className='alertIcon' onClick={routerAlarm}/>
                     </div>
                 </HeaderIcons>
