@@ -16,8 +16,7 @@ import ViewAll from '../../asset/view_all.png';
 const Community = () => {
 
     const hashTag = ['# 여행','# 식당','# 관광지','# 플로깅','# 펀딩'];
-    const boardItems = ['홍길동', '짱구', '철수', '흰둥이'];
-
+    
     let navigate = useNavigate();
     const onClickRouteWriting = () => {
         navigate('/board/add');

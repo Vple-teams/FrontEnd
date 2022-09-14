@@ -35,6 +35,7 @@ width: 128.72px;
 height: 30px;
 background-color: white;
 background-size: 128.72px 35.81px;
+text-align: center;
 
 
 .plan-title{

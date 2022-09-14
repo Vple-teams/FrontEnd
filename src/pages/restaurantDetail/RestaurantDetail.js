@@ -69,10 +69,7 @@ export default function RestaurantDetail() {
     const reviews = [
         { review1: 1 },
         { review2: 2 },
-        { review1: 3 },
-        { review2: 4 },
-        { review1: 5 },
-        { review2: 6 },
+        { review1: 3 }
     ];
 
     //스크롤
@@ -130,7 +127,7 @@ export default function RestaurantDetail() {
                     <div className='titleDeco' />
                     <h3 className='recommendTitle'>메뉴</h3>
                 </MenuTitle>
-                <ul>
+                <ul className='menu-list'>
                     {menu.map(value => (
                         <MenuCardButton
                             menu={value.name}
@@ -139,7 +136,7 @@ export default function RestaurantDetail() {
                         />
                     ))}
                 </ul>
-                <MoreButton><img src={IconMore} className="iconMore" />더보기</MoreButton>
+                {/* <MoreButton><img src={IconMore} className="iconMore" />더보기</MoreButton> */}
             </MenuDiv>
 
             <ReviewDiv >
@@ -147,7 +144,7 @@ export default function RestaurantDetail() {
                     <ReviewTitle>
                         <div className='titleDeco' />
                         <h3 className='recommendTitle'>후기</h3>
-                        <p className='number'>(14)</p>
+                        <p className='number'>별점 {detailRestaurant.rating}</p>
                     </ReviewTitle>
                     <div className='align-right'>
                         

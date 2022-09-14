@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { getRecommandRestaurantUrl } from '../../recoil/state';
 import Header from "../header/Header";
 import RestaurantCard from '../../components/restaurantCard/RestaurantCard';
-import { UlStyle } from '../../styles/UlStyle';
 
 import {
     SelectBar,
@@ -21,12 +20,7 @@ import {
     RecommendItemsWrap
 } from "./HomeStyle";
 import arrow from '../../asset/arrow.png'
-import Flag from '../../asset/flag.png';
 import image from '../../asset/page1.jpg';
-import image2 from '../../asset/page2.jpg';
-// import arrow from '../../asset/arrow.png';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 
 import { ButtonStyle } from '../../styles/ButtonStyle';
 import { useRecoilValue } from 'recoil';

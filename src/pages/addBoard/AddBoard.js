@@ -5,34 +5,50 @@ import {BoardInput, Container, GetImageBtn, HashTagContainer, ProfileWrap, Writi
 import Logo from '../../asset/logo.png'
 import Camera from '../../asset/camera.png';
 import ReviewTag from '../../components/reviewTag/ReviewTag';
+import axios from 'axios';
 
 
 
 const AddBoard = (textState) => {
 
-    //작성 글
-    const [content, setContent] = useState("");
-    const writeContent = (content) => {
-        setContent(content);
-    }
     //textarea
     const [contentValue, setContentValue] = useState("");
     const onContentChange = (event) => {
         setContentValue(event.currentTarget.value);
     }
-    console.log(contentValue);
 
 
     //axios 데이터 보내기
+    // const frm = new FormData();
+    // //frm.append('hashtag', [])
+    // frm.append('html', contentValue);
+    // frm.append('reviewPost', false);
 
+    const postContent = () => {
+        // axios.post('https://vple-backend.all.gagark.shop/auth/post', {
+        //     'html' : contentValue,
+        //     'reviewPost' : false,
+        // })
+        // .then(response => {
+        //     console.log('response : ', JSON.stringify(response, null, 2));
+        // }).catch(error => {
+        //     console.log('failed', error)
+        // });
 
+        axios({
+            method: "POST",
+            url: 'https://vple-backend.all.gagark.shop/auth/post',
+            data: {
+                "html" : contentValue,
+                "reviewPost" : false,
+            }
+        }).then((res) => {
+            console.log(res);
+        });
+    }
 
-
-
-
-
+   
     
-
     //태그
     const hasTagCategory = ['# 여행','# 식당','# 관광지','# 플로깅','# 펀딩'];
 
@@ -75,7 +91,7 @@ const AddBoard = (textState) => {
                             })}
                         </div>
                         <div className='submit-btn-box'>
-                            <div className='submit-btn' onClick={writeContent}>등록하기</div>
+                            <div className='submit-btn' onClick={postContent}>등록하기</div>
                         </div>
                     </HashTagContainer>
                 </WritingForm>

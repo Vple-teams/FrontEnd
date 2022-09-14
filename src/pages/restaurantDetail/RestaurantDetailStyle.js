@@ -110,8 +110,9 @@ export const MenuDiv = styled.div`
     background-color: #F8F8F8;
     text-align: center;
 
-    ul{
-        
+    .menu-list{
+        text-align: left;
+        padding-left: 20px;
     }
 `;
 export const MenuTitle = styled.div`
@@ -148,7 +149,7 @@ export const MoreButton = styled(ButtonStyle)`
 `;
 
 export const ReviewDiv = styled.div`
-    padding-top: 20px;
+
     background-color: #F8F8F8;
     text-align: center;
     padding-bottom: 30px;
@@ -188,9 +189,10 @@ export const ReviewTitle = styled.div`
 
     .number{
         margin-top: 3px;
-        margin-left: 5px;
-        font-size: 12px;
+        margin-left: 10px;
+        font-size: 13px;
         color: #ABABAB;
+        line-height: 13px;
     }
 `
 export const WriteReviewBtn = styled(ButtonStyle)`
