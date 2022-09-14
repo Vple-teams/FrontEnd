@@ -38,3 +38,27 @@ export const StyledSearchButton = styled(ButtonStyle)`
     background-size: 14.64px, 14.61px;
     margin-left: 10px;
 `;
+
+export const SelectLocationOption = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0px 18px;
+  
+  .select-box{
+    color: #A5A5A5;
+    font-size: 13px;
+    padding-left: 15px;
+    margin-top: 6px;
+    width: 44%;
+    height: 36px;
+    border-radius: 10px;
+    outline: none;
+    border: solid 0.5px #858585;
+    appearance:none;
+
+    .option{
+      color: #858585;
+    }
+  };
+`;

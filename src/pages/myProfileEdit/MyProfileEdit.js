@@ -104,9 +104,6 @@ export default function MyProfile() {
         setMenu(menuIndex)
     }
 
-    //프로필 편집 버튼 정보 받기
-    //const location = useLocation();
-
     //저장하기 버튼 -> 프로필 페이지 이동
     const navigate = useNavigate();
     const moveProfilePage = () => {

@@ -9,8 +9,6 @@ export const SelectBar = styled.div`
 
   position: absolute;
   top: 100px;
-    
-
 `;
 
 export const SearchContainer = styled.section`
@@ -124,6 +122,7 @@ export const CardWrap = styled.div`
     width: 100%;
     height: 77%;
     background-color: gainsboro;
+    object-fit : cover;
   }
 
   .cardInfoWrap {
@@ -153,6 +152,7 @@ export const RecommendContainer = styled.article`
   width: 100%;
   height: 213px;
   background-color: white;
+  padding-bottom: 20px;
 `;
 
 export const RecommendTitleWrap = styled.div`
@@ -184,7 +184,6 @@ export const RecommendTitleWrap = styled.div`
 export const ContainerItemsWrap = styled.div`
   width: 100%;
   background-color: white;
-  
 `;
 
 export const RecommendItemsWrap = styled.div`
@@ -192,7 +191,10 @@ export const RecommendItemsWrap = styled.div`
   align-items: center;
   flex-wrap: nowrap;
   overflow: auto;
-  width: 100%;
+  overflow-y: hidden;
+  margin-left: 20px;
+  margin-top: 5px;
+
   height: 180px;
   //border: solid 1px red;
 `;
@@ -225,7 +227,12 @@ export const RecommendImageWrap = styled.div`
     z-index: 0;
     position: relative;
     bottom: 24%;
-    color: white;
+    color: black;
+
     font-size: 13px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 `;

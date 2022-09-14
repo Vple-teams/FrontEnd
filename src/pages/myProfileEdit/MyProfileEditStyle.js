@@ -132,7 +132,7 @@ export const ContentsContainer = styled.div`
     .plan{
         padding-bottom: 300px;
         padding: 10px 30px;
-        text-align: center;
+        text-align: left;
     }
     .follow{
         padding-bottom: 30px;

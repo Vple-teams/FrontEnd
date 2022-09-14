@@ -3,13 +3,22 @@ import {useNavigate} from "react-router-dom";
 import { ButtonStyle } from '../../styles/ButtonStyle';
 import {CardButtonStyle, StyledImgDiv, ClipButtonG, ClipButtonW,
     StyledContentDiv, StyledTitleFont} from './RestaurantCardStyle';
+import logo from '../../asset/logo.png';
 
-export default function CardButton2({name}) {
+export default function RestaurantCard({id, name, img}) {
 
     //화면 이동
     let navigate = useNavigate();
     const routerDetail = () => {
-        navigate('/restaurant/detail')
+
+        navigate('/restaurant/detail', {
+            state: {
+                id: id,
+                name: name,
+                img: img,
+            }
+        });
+
         window.scrollTo(0,0)
     }
 
@@ -23,7 +32,8 @@ export default function CardButton2({name}) {
             
             <div onClick={routerDetail}>
             
-            <StyledImgDiv/>
+            <StyledImgDiv src={img === null ? logo : img} className='restaurant-img'/>
+
             <StyledContentDiv>
                 <StyledTitleFont>{name}</StyledTitleFont>
             </StyledContentDiv>
