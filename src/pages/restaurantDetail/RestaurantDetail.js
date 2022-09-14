@@ -1,9 +1,12 @@
 import DetailHeader from '../../components/detailHeader/DetailHeader'
 import tempGuide from '../../asset/temp/tempGuide.png';
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Review from '../../components/review/Review';
+// import { useRecoilValue } from 'recoil';
+// import { getDetailRestaurantUrl } from '../../recoil/state';
+import axios from 'axios';
 
 import {
     ImageWrap,
@@ -43,16 +46,26 @@ export default function RestaurantDetail() {
         window.scrollTo(0,0)
     }
 
-    //const location = useLocation();
+    const location = useLocation();
+    const id = location.state.id;
+    const name = location.state.name;
+    const img = location.state.img;
 
+    //식당 상세 정보 url 받아오기
+    const [detailRestaurant, setDetailRestaurant] = useState([]);
+    const [menu, setMenu] = useState([]);
+    useEffect(() => {
+        axios.get('https://vple-backend.all.gagark.shop/api/recommand/restaurant/'+id)
+            .then(response => {
+                setDetailRestaurant(response.data);
+                setMenu(response.data.menus);
+            });
+    }, []);
+
+    //클립
     const [isClip, setClip] = useState(false);
 
-    const cards = [
-        { menu: '징거', price: '165000' },
-        { menu: '뽀빠이', price: '13000' },
-        { menu: '레드풀', price: '12500' },
-    ];
-
+    //식당 리뷰
     const reviews = [
         { review1: 1 },
         { review2: 2 },
@@ -73,35 +86,41 @@ export default function RestaurantDetail() {
         <div  ref={topRef}>
             <DetailHeader title="식당"/>
             <ImageWrap>
-                <img src={tempGuide} className='guide-image' />
+                <img src={img} className='guide-image' />
             </ImageWrap>
             <InfoDiv>
-                <div className="titleWrap">{"[위샐러듀]"}</div>
+                <div className="titleWrap">[ {name} ]</div>
                 <ClipDiv>
                     <ButtonStyle onClick={() => setClip(!isClip)}>
                         {isClip ? <ClipButtonG /> : <ClipButtonW />}
                     </ButtonStyle>
                 </ClipDiv>
                 <TagContainer>
-                    <TagDiv>비건</TagDiv>
-                    <TagDiv>락토</TagDiv>
+                    <TagDiv>{detailRestaurant.category}</TagDiv>
                 </TagContainer>
-                <div className="writerWrap">{"위샐러듀는 그리스, 이스라엘, 레바논등의 가정식 전문점으로 한끼 건강한 지중해 가정식을 제공하기 위해 노력합니다. 위샐러듀는 그리스, 이스라엘, 레바논등의 가정식 전문점입니다."}</div>
+                <div className="writerWrap">{detailRestaurant.introduction}</div>
                 <div className="partition" />
 
                 <WrapInformation>
                     <img src={IconMapPointer} className="icon" />
-                    <div className="info">서울 서대문구 이화여대길 52-31</div>
+                    <div className="info">{detailRestaurant.address}</div>
                 </WrapInformation>
                 <WrapInformation>
                     <img src={IconClock} className="icon" />
                     <div className="info">영업시간</div>
+
                     <WrapRunTime>
+                        <p className="day">{detailRestaurant.openTime}</p>
+                    </WrapRunTime>
+
+                    
+                    {/* <WrapRunTime>
                         <p className="day">월 - 토</p><p className="hour">10:00 - 20:00</p>
                     </WrapRunTime>
                     <WrapRunTime>
                         <p className="day">일요일</p><p className="hour">휴무</p>
-                    </WrapRunTime>
+                    </WrapRunTime> */}
+
                 </WrapInformation>
             </InfoDiv>
 
@@ -112,10 +131,11 @@ export default function RestaurantDetail() {
                     <h3 className='recommendTitle'>메뉴</h3>
                 </MenuTitle>
                 <ul>
-                    {cards.map(card => (
+                    {menu.map(value => (
                         <MenuCardButton
-                            menu={card.menu}
-                            price={card.price}
+                            menu={value.name}
+                            veganType={value.veganType}
+                            img= {value.image}
                         />
                     ))}
                 </ul>

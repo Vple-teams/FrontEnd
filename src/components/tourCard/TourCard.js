@@ -4,7 +4,7 @@ import { ButtonStyle } from '../../styles/ButtonStyle';
 import {CardButtonStyle, StyledImgDiv, ClipButtonG, ClipButtonW,
     StyledContentDiv, StyledTitleFont} from './TourCardStyle';
 
-export default function CardButton2({name}) {
+export default function TourCard({name}) {
 
     //화면 이동
     let navigate = useNavigate();

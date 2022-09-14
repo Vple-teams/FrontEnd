@@ -109,6 +109,10 @@ export const WrapRunTime = styled.div`
 export const MenuDiv = styled.div`
     background-color: #F8F8F8;
     text-align: center;
+
+    ul{
+        
+    }
 `;
 export const MenuTitle = styled.div`
     padding: 25px 30px 10px 30px;

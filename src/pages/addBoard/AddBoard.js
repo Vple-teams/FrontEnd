@@ -10,8 +10,31 @@ import ReviewTag from '../../components/reviewTag/ReviewTag';
 
 const AddBoard = (textState) => {
 
-    const hasTagCategory = ['# 여행','# 식당','# 관광지','# 플로깅','# 펀딩'];
+    //작성 글
+    const [content, setContent] = useState("");
+    const writeContent = (content) => {
+        setContent(content);
+    }
+    //textarea
+    const [contentValue, setContentValue] = useState("");
+    const onContentChange = (event) => {
+        setContentValue(event.currentTarget.value);
+    }
+    console.log(contentValue);
 
+
+    //axios 데이터 보내기
+
+
+
+
+
+
+
+    
+
+    //태그
+    const hasTagCategory = ['# 여행','# 식당','# 관광지','# 플로깅','# 펀딩'];
 
     return(
         <>
@@ -28,7 +51,13 @@ const AddBoard = (textState) => {
                             <h4>닉네임</h4>
                         </div>
                     </ProfileWrap>
-                    <textarea className='board-input' placeholder='내용을 입력해 주세요'/>
+                    <textarea 
+                        className='board-input' 
+                        placeholder='내용을 입력해 주세요'
+                        onChange= {onContentChange}
+                        value= {contentValue}
+                        name= 'content' />
+
                     <GetImageBtn>
                         <img src={Camera} className='camera-icon'/>
                     </GetImageBtn>
@@ -46,7 +75,7 @@ const AddBoard = (textState) => {
                             })}
                         </div>
                         <div className='submit-btn-box'>
-                            <div className='submit-btn'>등록하기</div>
+                            <div className='submit-btn' onClick={writeContent}>등록하기</div>
                         </div>
                     </HashTagContainer>
                 </WritingForm>

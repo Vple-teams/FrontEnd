@@ -7,16 +7,16 @@ export const CardButtonStyle = styled(ButtonStyle)`
     box-shadow: 0px 0px 5px #C5C5C5;
     border-radius: 10px;
     margin: 10px;
+    position: relative;
 `;
 
-export const StyledImgDiv = styled.div`
+export const StyledImgDiv = styled.img`
     width: 133px;
     height: 117px;
-    background-size: 132.76px, 141.16px;
     background-color: #F8F8F8;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
+    object-fit : cover;
 `;
 
 export const ClipButtonW = styled(ButtonStyle)`
@@ -42,7 +42,7 @@ export const ClipButtonG = styled(ButtonStyle)`
 
 export const StyledContentDiv = styled.div`
     width: 133px;
-    height: 38px;
+    height: 48px;
     background-size: 132.76px, 42.02px;
     background-color: #FFFFFF;
     border-bottom-left-radius: 10px;

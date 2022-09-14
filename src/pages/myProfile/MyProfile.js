@@ -4,6 +4,7 @@ import ProfilePlan from '../../components/profilePlan/ProfilePlan';
 import ProfileFollowing from '../../components/profileFollowing/ProfileFollowing';
 import ProfileFollow from '../../components/profileFollow/ProfileFollow';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import {
     ProfileContainer,
@@ -22,6 +23,7 @@ import {
 
 import tempProfile from '../../asset/temp/tempProfile.jpeg';
 
+
 export default function MyProfile() {
 
 
@@ -31,6 +33,17 @@ export default function MyProfile() {
         navigate('/myProfile/edit');
         window.scrollTo(0,0)
     }
+
+    //사용자 정보
+    const [user, setUser] = useState([]);
+
+    useEffect(() => {
+        axios.get('https://vple-backend.all.gagark.shop/auth/user')
+            .then(response => {
+                setUser(response.data);
+                console.log(response);
+            });
+    }, []);
 
     const planCards = [
         '뚜벅이 경주 맛집',
