@@ -29,11 +29,14 @@ export default function Login() {
 
             <Interval>
                 <InputDiv>
-                    <StyledIconEmail /> <StyledInputEmail placeholder="이메일"></StyledInputEmail>
+                    <StyledIconEmail />
+                    <StyledInputEmail placeholder="이메일" />
                 </InputDiv>
                 <InputDiv>
-                    <StyledIconLock /> <StyledInputPassword placeholder="비밀번호"
-                        type={showPassword ? "text" : "password"}></StyledInputPassword>
+                    <StyledIconLock />
+                    <StyledInputPassword
+                        placeholder="비밀번호"
+                        type={showPassword ? "text" : "password"} />
                     <ButtonStyle
                         onClick={changeShowPassword}
                     > {showPassword ? <HideButton /> : <RevealButton />}
