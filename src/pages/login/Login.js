@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {useNavigate} from "react-router-dom";
+import { Link } from 'react-router-dom';
 import Logo from '../../asset/logo.png';
 import {
     StyledTopMargin, StyledLogo, StyledDiv, Interval, InputDiv, StyledIconEmail, StyledInputEmail,
@@ -15,7 +16,6 @@ export default function Login() {
         navigate('/') 
         window.scrollTo(0, 0)
     };
-
     const [showPassword, setShowPassword] = useState(false)
     const changeShowPassword = () => {
         setShowPassword(!showPassword)
@@ -57,7 +57,7 @@ export default function Login() {
 
             <br />
             <div>
-                <StyledKaKaoButton />
+                <StyledKaKaoButton onClick={()=> window.open('http://vple-backend.all.gagark.shop/oauth2/authorization/kakao', '_blank')}/>
                 <StyledNaverButton />
                 <StyledGoogleButton />
             </div>
