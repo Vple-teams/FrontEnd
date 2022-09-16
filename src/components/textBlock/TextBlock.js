@@ -12,13 +12,13 @@ import More from "../../asset/more4.png";
 import heart from "../../asset/hart.png";
 import Bubble from "../../asset/buble.png";
 
-import { getPostUrl } from '../../recoil/state';
-import { useRecoilValue } from 'recoil';
+// import { getPostUrl } from '../../recoil/state';
+// import { useRecoilValue } from 'recoil';
 
 const TextBlock = () => {
 
     //커뮤니티 내용
-    const postInfo = useRecoilValue(getPostUrl);
+    // const postInfo = useRecoilValue(getPostUrl);
 
     const boardItems = ['홍길동', '짱구', '철수', '흰둥이'];
 
@@ -41,7 +41,7 @@ const TextBlock = () => {
                                 </div>
                             </ProfileForm>
                             <TextWrap>
-                                <p>{postInfo.content}</p>
+                                <p></p>
                             </TextWrap>
 
 

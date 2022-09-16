@@ -16,12 +16,12 @@ export const getRecommandRestaurantUrl = selector({
 })
 
 //커뮤니티
-export const getPostUrl = selector({
-    key: 'getPostUrl',
-    get: async ({get}) => {
-        const res = await axios.get('https://vple-backend.all.gagark.shop/api/post');
-        return res.data
-    }
-})
+// export const getPostUrl = selector({
+//     key: 'getPostUrl',
+//     get: async ({get}) => {
+//         const res = await axios.get('https://vple-backend.all.gagark.shop/api/post');
+//         return res.data
+//     }
+// })
 
 //플로깅

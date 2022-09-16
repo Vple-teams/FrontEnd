@@ -5,7 +5,6 @@ import Header from "../header/Header";
 import RestaurantCard from '../../components/restaurantCard/RestaurantCard';
 
 import {
-    SelectBar,
     SearchContainer,
     ButtonWrap,
     ItemsBtn,
@@ -54,11 +53,9 @@ const Home = () => {
     return (
         <>
             <Header />
-            <SelectBar />
             <SearchContainer>
                 <p className='userWrap'>
                     <span >홍길동</span> 님,
-                    <span>홍길동</span> 님,
                 </p>
                 <p className='textWrap'>비플 함께 친환경 여행을 떠나보세요!</p>
             </SearchContainer>

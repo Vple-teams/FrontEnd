@@ -20,6 +20,18 @@ export const InputContainer = styled.div`
   z-index: 2;
   width: 68%;
   
+  .search-btn {
+    width: 100px;
+    height: 30px;
+    position: relative;
+    border: none;
+    border-radius: 20px;
+    background-color: #758B6F;
+    color: #ffffff;
+    left: 200px;
+    top: 20px;
+  }
+  
   .search-location{
     padding-left: 10px;
     width: 447px;
@@ -40,17 +52,13 @@ export const ShowMoreButton = styled(ButtonStyle)`
   height: 30px;
   background-color: #758B6F;
   background-size: 300px 50px;
-  
   color: white;
   font-size: 14px;
   border-radius: 20px;
-
   z-index: 2;
-  
   position: absolute;
-  top: 630px;
+  top: 780px;
   left: 200px;
-
 `;
 
 export const CustomSheet = styled(Sheet)`

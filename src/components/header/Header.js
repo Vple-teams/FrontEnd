@@ -8,8 +8,6 @@ import Logo from '../../asset/logo.png';
 import Profile from '../../asset/Profile.png';
 import Alert from '../../asset/Alert.png';
 
-
-
 const Header = () => {
 
     const headerTabList = useRecoilValue(headerListState); // 해더에 보여줄 배열 string 값

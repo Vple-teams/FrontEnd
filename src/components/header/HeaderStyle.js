@@ -58,6 +58,7 @@ export const NavContainer = styled.nav`
     font-size: 17px;
     color: #000000;
     // transform 속성 변경 될때 같이 색깔 변경
+
   }
 `;
 

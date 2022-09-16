@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import Header from '../header/Header'
 import {
-    SelectBar,
     CalendarWrap,
     CountContainer,
     CountWrap,
@@ -39,7 +38,6 @@ const Plan = () => {
     return (
         <>
             <Header />
-            <SelectBar />
 
             <PlanContainer>
                 <p className='basic-setting'>기본 설정</p>
