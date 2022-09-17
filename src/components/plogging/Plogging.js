@@ -2,7 +2,6 @@ import React, {useRef, useState} from 'react'
 import {useNavigate} from "react-router-dom";
 
 import {
-    SelectBar,
     BoardContainer,
     BoardHeaderWrap, BoardList,
     BoardListWrap,
@@ -49,8 +48,6 @@ const Plogging = () => {
         <div ref={topRef}>
             
             <Header/>
-            <SelectBar/>
-            
             <Container >
                 <PloggingTitleWrap>
                     <h2>플로깅 공고</h2>

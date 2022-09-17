@@ -24,28 +24,28 @@ const AddBoard = (textState) => {
     // frm.append('html', contentValue);
     // frm.append('reviewPost', false);
 
-    const postContent = () => {
-        // axios.post('https://vple-backend.all.gagark.shop/auth/post', {
-        //     'html' : contentValue,
-        //     'reviewPost' : false,
-        // })
-        // .then(response => {
-        //     console.log('response : ', JSON.stringify(response, null, 2));
-        // }).catch(error => {
-        //     console.log('failed', error)
-        // });
+    // const postContent = () => {
+    //     // axios.post('https://vple-backend.all.gagark.shop/auth/post', {
+    //     //     'html' : contentValue,
+    //     //     'reviewPost' : false,
+    //     // })
+    //     // .then(response => {
+    //     //     console.log('response : ', JSON.stringify(response, null, 2));
+    //     // }).catch(error => {
+    //     //     console.log('failed', error)
+    //     // });
 
-        axios({
-            method: "POST",
-            url: 'https://vple-backend.all.gagark.shop/auth/post',
-            data: {
-                "html" : contentValue,
-                "reviewPost" : false,
-            }
-        }).then((res) => {
-            console.log(res);
-        });
-    }
+    //     axios({
+    //         method: "POST",
+    //         url: 'https://vple-backend.all.gagark.shop/auth/post',
+    //         data: {
+    //             "html" : contentValue,
+    //             "reviewPost" : false,
+    //         }
+    //     }).then((res) => {
+    //         console.log(res);
+    //     });
+    // }
 
    
     
@@ -91,7 +91,7 @@ const AddBoard = (textState) => {
                             })}
                         </div>
                         <div className='submit-btn-box'>
-                            <div className='submit-btn' onClick={postContent}>등록하기</div>
+                            <div className='submit-btn' >등록하기</div>
                         </div>
                     </HashTagContainer>
                 </WritingForm>

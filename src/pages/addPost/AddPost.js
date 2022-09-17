@@ -14,17 +14,17 @@ const AddPost = () => {
         setContentValue(event.currentTarget.value);
     }
 
-    const postContent = () => {
-        axios({
-            method: "POST",
-            url: 'https://vple-backend.all.gagark.shop/auth/plogging',
-            data: {
-                "html" : contentValue,
-            }
-        }).then((res) => {
-            console.log(res);
-        });
-    }
+    // const postContent = () => {
+    //     axios({
+    //         method: "POST",
+    //         url: 'https://vple-backend.all.gagark.shop/auth/plogging',
+    //         data: {
+    //             "html" : contentValue,
+    //         }
+    //     }).then((res) => {
+    //         console.log(res);
+    //     });
+    // }
 
     return(
         <>
@@ -44,7 +44,7 @@ const AddPost = () => {
                             onChange= {onContentChange}
                             value= {contentValue}
                             name= 'content' />
-                        <ApplyBtn onClick={postContent}>등록하기</ApplyBtn>
+                        <ApplyBtn >등록하기</ApplyBtn>
                     </TextWrap>
                 </TextContainer>
             </Container>
